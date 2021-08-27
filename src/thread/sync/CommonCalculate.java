@@ -10,9 +10,9 @@ public class CommonCalculate {
         this.interest=0;
     }
     public void addInterest(int val){
-        synchronized (lock1){
+     //   synchronized (lock1){
             interest+=val;
-        }
+     //   }
 
     }
     public void plus(int val){
