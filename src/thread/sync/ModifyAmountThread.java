@@ -14,6 +14,7 @@ public class ModifyAmountThread extends Thread{
         for (int i=0;i<1000;i++){
             if(flag){
                 calc.plus(1);
+                calc.addInterest(1);
             }else{
                 calc.minus(1);
             }

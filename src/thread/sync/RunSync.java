@@ -19,7 +19,7 @@ public class RunSync {
         try {
             amountThread1.join();
             amountThread2.join();
-            System.out.println("Final value is : "+ calculate.getAndPrintAmount());
+            calculate.getAndPrintAmount();
 
         } catch (InterruptedException e) {
             e.printStackTrace();
