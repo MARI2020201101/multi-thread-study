@@ -17,12 +17,16 @@ class Exercise9Th extends Thread{
     @Override
     public void run() {
         int i = 10;
-        while(i!=0 && isInterrupted()){
+        while(i!=0 && !isInterrupted()){
             System.out.println(i--);
 
             try{
                 Thread.sleep(1000);
-            }catch (Exception e){}
+            }catch (Exception e){
+                Thread.currentThread().interrupt();
+
+            }
+
         }
         System.out.println("count 종료");
     }
